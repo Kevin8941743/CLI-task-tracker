@@ -68,14 +68,17 @@ if (method === "update" && getting_id && title) {
 
     const finding_id = values.find(f => f.id === getting_id)
 
-    if (finding_id.length < 0) {
+    if (!finding_id) {
         console.log("ID for task is not present!")
         process.exit(0)
     }
 
     finding_id.name = title
+    finding_id.updatedAt = new Date().toISOString()
 
-    fs.writeFileSync("Data.json", JSON.stringify(values))
+    fs.writeFileSync("Data.json", JSON.stringify(values, "", 2))
+
+    console.log("Task updated successfully!")
 
 }
 
