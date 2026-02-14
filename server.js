@@ -40,7 +40,7 @@ if (method === "list") {
         process.exit(0)
     }
 
-    const day = new Date().toISOString()
+    const day = new Date().toLocaleString()
 
     const ids = values.map(task => task.id)
     const maxId = ids.length > 0 ? Math.max(...ids) : 0
@@ -74,7 +74,7 @@ if (method === "update" && getting_id && title) {
     }
 
     finding_id.name = title
-    finding_id.updatedAt = new Date().toISOString()
+    finding_id.updatedAt = new Date().toLocaleString()
 
     fs.writeFileSync("Data.json", JSON.stringify(values, "", 2))
 
