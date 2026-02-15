@@ -136,6 +136,13 @@ if (method === "mark-not-done" && getting_id) {
     console.log("Status of task changed to mark-not-done")
 }
 
+if (method === "list") {
+
+    for (let i = 0; i < values.length; i++){
+        console.log(values[i].name)
+    }
+}
+
 
 
 
