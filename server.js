@@ -15,9 +15,14 @@ const method = args[2] ? args[2].toLowerCase() : null
 
 let getting_id;
 let title;
+let extra_filter;
 
-if (method === "add" || method === "list" ) {
+if (method === "add") {
     title = args[3]
+}
+
+if (method === "list") {
+    extra_filter = args[3]
 }
 
 if (method === "update") {
@@ -28,6 +33,8 @@ if (method === "update") {
 if (method === "mark-done"  || method === "mark-in-progress" || method === "mark-not-done" ) {
     getting_id = Number(args[3])
 }
+
+
 
 
 // Adding a task 
@@ -137,25 +144,16 @@ if (method === "mark-not-done" && getting_id) {
 }
 
 if (method === "list") {
+    if (extra_filter) {
 
-    for (let i = 0; i < values.length; i++){
-        console.log(values[i].name)
+        const done = values.filter(f => f.status === extra_filter)
+
+        done.forEach(task => {
+            console.log(
+                `id: ${task.id}\nname: ${task.name}\nstatus: ${task.status}\ntimeCreated: ${task.timeCreated}\nupdatedAt: ${task.updatedAt}\n`
+            )
+        } )
+    } else {
+        values.forEach(task => console.log(task.name))
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
