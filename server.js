@@ -30,7 +30,7 @@ if (method === "update") {
     title = args[4]
 }
 
-if (method === "mark-done"  || method === "mark-in-progress" || method === "mark-not-done" ) {
+if (method === "mark-done"  || method === "mark-in-progress" || method === "mark-not-done" || method === "delete" ) {
     getting_id = Number(args[3])
 }
 
@@ -156,4 +156,16 @@ if (method === "list") {
     } else {
         values.forEach(task => console.log(task.name))
     }
+}
+
+if (method === "delete" && getting_id ) {
+
+    const deleting = values.filter(f => f.id != getting_id)
+
+    if (values.length != deleting.length) {
+        console.log("The item has been sucessfully deleted!")
+    }
+
+    fs.writeFileSync("data.json", JSON.stringify(deleting, "", 2))
+
 }
