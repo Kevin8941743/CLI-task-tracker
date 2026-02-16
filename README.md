@@ -128,7 +128,7 @@ Each task is stored in `Data.json` with the following format:
 {
   "id": 1,
   "description": "Buy milk",
-  "status": "todo",
+  "status": "mark-not-done",
   "createdAt": "2026-02-16T10:00:00",
   "updatedAt": "2026-02-16T10:00:00"
 }
