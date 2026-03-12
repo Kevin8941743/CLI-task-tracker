@@ -13,5 +13,7 @@ WORKDIR /task_tracker
 
 COPY --from=prepare /task_tracker/node_modules ./node_modules 
 
+COPY . .
+
 CMD ["node", "server.js"]
 
