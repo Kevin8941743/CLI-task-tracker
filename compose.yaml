@@ -1,4 +1,5 @@
-services: 
+services:
   data:
+    build: .
     volumes:
       - .:/task_tracker

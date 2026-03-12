@@ -8,22 +8,6 @@
     "updatedAt": "2/26/2026, 3:33:38 PM"
   },
   {
-    "title": "cheese",
-    "id": 3,
-    "description": "I shall go to Rio's tonight for dinner",
-    "status": "mark-in-progress",
-    "createdAt": "2/26/2026, 3:33:56 PM",
-    "updatedAt": "2/26/2026, 3:33:56 PM"
-  },
-  {
-    "title": "hindu",
-    "id": 3,
-    "description": "hinduism",
-    "status": "todo",
-    "createdAt": "2/26/2026, 3:48:35 PM",
-    "updatedAt": "2/26/2026, 3:48:35 PM"
-  },
-  {
     "title": "hello",
     "id": 4,
     "description": "fourty",
