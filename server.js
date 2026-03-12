@@ -62,8 +62,8 @@ if (method === "mark-done"  || method === "mark-in-progress" || method === "mark
         updatedAt: day
     }
     
-    values.push(users)
 
+    values.push(users)
     fs.writeFileSync("Data.json", JSON.stringify(values, "", 2))
 
     console.log(`Task added successfully (ID: ${newId})`)
