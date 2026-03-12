@@ -1,6 +1,5 @@
 import fs from "fs"
 
-
 if (!fs.existsSync("Data.json")) {
     fs.writeFileSync("Data.json", JSON.stringify([]))
     console.log("Data.json has been created!")
@@ -167,5 +166,4 @@ if (method === "delete" && getting_id ) {
     }
 
     fs.writeFileSync("data.json", JSON.stringify(deleting, "", 2))
-
 }
