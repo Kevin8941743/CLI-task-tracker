@@ -47,6 +47,7 @@ if (method === "mark-done"  || method === "mark-in-progress" || method === "mark
         process.exit(0)
     }
 
+
     const day = new Date().toLocaleString()
 
     const ids = values.map(task => task.id)
